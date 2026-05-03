@@ -30,6 +30,9 @@ NumPy
 Pandas
 Matplotlib
 
+## Screenshot
+![Screenshot](moviereview.png)
+
 ## How It Works
 -Load and preprocess sequential data
 
