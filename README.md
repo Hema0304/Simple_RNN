@@ -1,4 +1,4 @@
-** Simple RNN Implementation (Deep Learning for Sequential Data)**
+**Simple RNN Implementation (Deep Learning for Sequential Data)**
 
 
 This project demonstrates the implementation of a Simple Recurrent Neural Network (Simple RNN) for handling sequential or time-dependent data.
