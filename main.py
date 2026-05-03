@@ -19,11 +19,15 @@ def decode_review(encoded_review):
 
 
 def preprocess_text(text):
-    words=text.lower().split()
-    encoded_review = [word_index.get(word,2) for word in words]
-    padded_review = sequence.pad_sequences([encoded_review],maxlen=500)
+    words = text.lower().split()
+    encoded_review = [word_index.get(word, 2) for word in words]
+    
+    padded_review = sequence.pad_sequences([encoded_review], maxlen=500)
+    
+    
+    padded_review = padded_review.reshape(1, 500, 1)
+    
     return padded_review
-
 ##prediction function
 
 def predict_sentiment(review):
