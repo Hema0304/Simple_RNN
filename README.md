@@ -23,6 +23,8 @@ In frameworks like Keras, a Simple RNN layer feeds its output back into itself, 
  
 - Learns temporal patterns from data
 
+  ![Screenshot](moviereview.png)
+
 ## Tech Stack
 Python
 TensorFlow / Keras
@@ -31,7 +33,9 @@ Pandas
 Matplotlib
 
 ## Screenshot
-![Screenshot](moviereview.png)
+![Screenshot](Screenshot1.png)
+![Screenshot](Screenshot2.png)
+
 
 ## How It Works
 -Load and preprocess sequential data
