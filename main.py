@@ -5,9 +5,7 @@ from tensorflow.keras.preprocessing import sequence
 from tensorflow.keras.models import load_model
 import streamlit as st
 
-# -------------------------------
-# Load IMDB word index correctly
-# -------------------------------
+
 word_index = imdb.get_word_index()
 
 # Shift indices (must match training)
@@ -17,14 +15,8 @@ word_index["<START>"] = 1
 word_index["<UNK>"] = 2
 word_index["<UNUSED>"] = 3
 
-# -------------------------------
-# Load trained model
-# -------------------------------
 model = load_model("simple_rnn_imdb.keras")
 
-# -------------------------------
-# Preprocess input text
-# -------------------------------
 def preprocess_text(text):
     words = text.lower().split()
 
@@ -46,9 +38,6 @@ def preprocess_text(text):
 
     return padded
 
-# -------------------------------
-# Predict sentiment
-# -------------------------------
 def predict_sentiment(review):
     processed = preprocess_text(review)
 
@@ -59,9 +48,7 @@ def predict_sentiment(review):
 
     return sentiment, score
 
-# -------------------------------
-# Streamlit UI
-# -------------------------------
+
 st.set_page_config(page_title="IMDB Sentiment Analysis")
 st.title("🎬 IMDB Movie Review Sentiment Analysis")
 
